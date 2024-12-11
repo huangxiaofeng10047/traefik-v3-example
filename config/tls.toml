@@ -1,17 +1,23 @@
+[tls]
+[tls.options]
 [tls.options.default]
 minVersion = "VersionTLS12"
-sniStrict = false
+maxVersion = "VersionTLS12"
+[tls.options.test-tls13]
+minVersion = "VersionTLS13"
 cipherSuites = [
-  #"TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256",
-  #"TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384",
-  #"TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
-
-  # TLS 1.3
-  "TLS_AES_128_GCM_SHA256",
-  "TLS_AES_256_GCM_SHA384",
-  "TLS_CHACHA20_POLY1305_SHA256",
-  # TLS 1.2
-  "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256",
   "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
   "TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384",
+  "TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305",
+  "TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305",
+  "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256",
+  "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256",
 ]
+
+[[tls.certificates]]
+certFile = "/data/ssl/halobug.cn.crt"
+keyFile = "/data/ssl/halobug.cn.key"
+
+[[tls.certificates]]
+certFile = "/data/ssl/lab.com.crt"
+keyFile = "/data/ssl/lab.com.key"

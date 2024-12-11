@@ -1,10 +1,10 @@
 [tls.stores.default.defaultCertificate]
-certFile = "/data/ssl/example.com.crt"
-keyFile = "/data/ssl/example.com.key"
+certFile = "/data/ssl/lab.com.crt"
+keyFile = "/data/ssl/lab.com.key"
 
 [[tls.certificates]]
-certFile = "/data/ssl/example.com.crt"
-keyFile = "/data/ssl/example.com.key"
+certFile = "/data/ssl/lab.com.crt"
+keyFile = "/data/ssl/lab.com.key"
 
 # others...
 # [[tls.certificates]]
